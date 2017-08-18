@@ -3,7 +3,7 @@ values ('eds-portal','applications',
       '[{
 		"name": "Utilities",
 		"icon": "fa fa-wrench",
-		"description": "Summary description of what ''Utilities'' are...",
+		"description": "Summary description of what Utilities are...",
 		"items": [{
 				"name": "Prevalence and Incidence",
 				"icon": "fa fa-bar-chart",
@@ -14,7 +14,7 @@ values ('eds-portal','applications',
 	{
 		"name": "Compass",
 		"icon": "fa fa-compass",
-		"description": "Summary description of what ''Compass'' is...",
+		"description": "Summary description of what Compass is...",
 		"items": [{
 				"name": "Dashboard",
 				"icon": "fa fa-dashboard",
