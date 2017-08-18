@@ -1,0 +1,2 @@
+service tomcat start
+service nginx start
