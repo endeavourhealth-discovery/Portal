@@ -7,6 +7,7 @@ import {FormsModule} from "@angular/forms";
 import {BrowserModule} from "@angular/platform-browser";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import { MenuComponent } from './menu/menu.component';
+import {PortalService} from "./portal.service";
 
 @NgModule({
   imports : [
@@ -20,6 +21,9 @@ import { MenuComponent } from './menu/menu.component';
   declarations : [
     MainComponent,
     MenuComponent
+  ],
+  providers : [
+    PortalService,
   ]
 })
 export class PortalModule { }

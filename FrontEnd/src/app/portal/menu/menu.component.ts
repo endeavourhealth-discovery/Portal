@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Domain} from "./models/domain";
+import {PortalService} from "../portal.service";
 
 @Component({
   selector: 'app-menu',
@@ -8,7 +9,8 @@ import {Domain} from "./models/domain";
 })
 export class MenuComponent implements OnInit {
 
-  protected applications : Domain[] = [
+  protected applications : Domain[] = [];
+  /*[
     {
       name : 'Utilities',
       icon : 'fa fa-wrench',
@@ -64,8 +66,15 @@ export class MenuComponent implements OnInit {
     },
 
   ];
-
-  constructor() { }
+*/
+  constructor(protected service : PortalService) {
+    let vm = this;
+    this.service.getConfig()
+      .subscribe(
+        (result) => vm.applications = result,
+        (error) => console.error(error)
+      );
+  }
 
   ngOnInit() {
   }
