@@ -24,6 +24,13 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
   }
 
+  hasClient(client : string) {
+    if (client == null || client == '')
+      return true;
+
+    return this.security.currentUser.clientAccess.includes(client);
+  }
+
   hasPermission(role : string) {
     if (role == null || role == '')
       return true;
