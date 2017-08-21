@@ -4,10 +4,12 @@ values ('eds-portal','applications',
 		"name": "Utilities",
 		"icon": "fa fa-wrench",
 		"description": "Summary description of what Utilities are...",
+		"role": "eds-compass:utility",
 		"items": [{
 				"name": "Prevalence and Incidence",
 				"icon": "fa fa-bar-chart",
-				"url": "/compass/app/utilities?utilId=1"
+				"url": "/compass/app/utilities?utilId=1",
+				"role": "eds-compass:utility-prev-inc"
 			}
 		]
 	},
@@ -15,18 +17,22 @@ values ('eds-portal','applications',
 		"name": "Compass",
 		"icon": "fa fa-compass",
 		"description": "Summary description of what Compass is...",
+		"role": "eds-compass"
 		"items": [{
 				"name": "Dashboard",
 				"icon": "fa fa-dashboard",
-				"url": "/compass/app/dashboard"
+				"url": "/compass/app/dashboard",
+				"role": "eds-compass:dashboard"
 			}, {
 				"name": "Library",
 				"icon": "fa fa-book",
-				"url": "/compass/app/library"
+				"url": "/compass/app/library",
+				"role": "eds-compass:library"
 			}, {
 				"name": "Utilities",
 				"icon": "fa fa-wrench",
-				"url": "/compass/app/utilities"
+				"url": "/compass/app/utilities",
+				"role": "eds-compass:utility"
 			}
 		]
 	},
@@ -34,14 +40,17 @@ values ('eds-portal','applications',
 		"name": "Data Checker",
 		"icon": "fa fa-search",
 		"description": "Data integrity checker application",
+		"role": "eds-data-checker",
 		"items": [{
 				"name": "Patient Explorer",
 				"icon": "fa fa-user",
-				"url": "/dataChecker/app/patientExplorer"
+				"url": "/dataChecker/app/patientExplorer",
+				"role": "eds-data-checker:patient-explorer"
 			}, {
 				"name": "Validation Reports",
 				"icon": "fa fa-file",
-				"url": "/dataChecker/app/validationReports"
+				"url": "/dataChecker/app/validationReports",
+				"role": "eds-data-checker:validation-reports"
 			}
 		]
 	}
