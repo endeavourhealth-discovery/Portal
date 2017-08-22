@@ -17,7 +17,7 @@ values ('eds-portal','applications',
 		"name": "Compass",
 		"icon": "fa fa-compass",
 		"description": "Summary description of what Compass is...",
-		"role": "eds-compass"
+		"role": "eds-compass",
 		"items": [{
 				"name": "Dashboard",
 				"icon": "fa fa-dashboard",
@@ -55,4 +55,5 @@ values ('eds-portal','applications',
 		]
 	}
 ]');
+
 
