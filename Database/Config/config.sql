@@ -4,11 +4,11 @@ values ('eds-portal','applications',
 		"name": "Utilities",
 		"icon": "fa fa-wrench",
 		"description": "Summary description of what Utilities are...",
-		"role": "eds-compass:utility",
+		"client": "eds-compass",
 		"items": [{
 				"name": "Prevalence and Incidence",
 				"icon": "fa fa-bar-chart",
-				"url": "/compass/app/utilities?utilId=1",
+				"url": "/compass/app/utilities/prev-inc",
 				"role": "eds-compass:utility-prev-inc"
 			}
 		]
@@ -17,7 +17,7 @@ values ('eds-portal','applications',
 		"name": "Compass",
 		"icon": "fa fa-compass",
 		"description": "Summary description of what Compass is...",
-		"role": "eds-compass",
+		"client": "eds-compass",
 		"items": [{
 				"name": "Dashboard",
 				"icon": "fa fa-dashboard",
@@ -40,7 +40,7 @@ values ('eds-portal','applications',
 		"name": "Data Checker",
 		"icon": "fa fa-search",
 		"description": "Data integrity checker application",
-		"role": "eds-data-checker",
+		"client": "eds-data-checker",
 		"items": [{
 				"name": "Patient Explorer",
 				"icon": "fa fa-user",

@@ -3,12 +3,12 @@
     <div class="row">
       <div *ngFor="let domain of applications" class="col-md-4">
         <div class="jumbotron">
-          <h1 class="text-center" [ngClass]="{'text-muted' : !hasClient(domain.role)}"><span [ngClass]="domain.icon"></span> {{domain.name}}</h1>
+          <h1 class="text-center"><span [ngClass]="domain.icon"></span> {{domain.name}}</h1>
           <br>
           <p>{{domain.description}}</p>
           <br>
           <span *ngFor="let item of domain.items">
-            <button [disabled]="!hasClient(domain.role) || !hasPermission(item.role)" class="btn btn-success" (click)="openWindow(item.url)"><span [ngClass]="item.icon"></span> {{item.name}}</button>
+            <button [disabled]="!hasPermission(domain.client, item.role)" class="btn btn-success" (click)="openWindow(item.url)"><span [ngClass]="item.icon"></span> {{item.name}}</button>
           </span>
         </div>
       </div>

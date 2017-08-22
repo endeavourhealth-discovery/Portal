@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Domain} from "./models/domain";
 import {PortalService} from "../portal.service";
-import {KeycloakService, SecurityService} from "eds-angular4";
+import {SecurityService} from "eds-angular4";
+import {Access} from "eds-angular4/dist/security/models/Access";
 
 @Component({
   selector: 'app-menu',
@@ -24,18 +25,16 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
   }
 
-  hasClient(client : string) {
-    if (client == null || client == '')
-      return true;
-
-    return this.security.currentUser.clientAccess.includes(client);
-  }
-
-  hasPermission(role : string) {
+  hasPermission(client, role : string) {
     if (role == null || role == '')
       return true;
 
-    return this.security.currentUser.permissions.includes(role);
+    let clientAccess : Access = this.security.currentUser.clientAccess[client];
+
+    if (clientAccess && clientAccess.roles)
+      return clientAccess.roles.includes(role);
+
+    return false;
   }
 
   openWindow(url : string) {
