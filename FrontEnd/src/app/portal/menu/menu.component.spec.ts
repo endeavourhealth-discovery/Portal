@@ -5,7 +5,6 @@ import {MockSecurityService} from "../../mocks/mock.security.service";
 import {SecurityService} from "eds-angular4";
 import {PortalService} from "../portal.service";
 import {MockPortalService} from "../../mocks/mock.portal.service";
-import {By} from "@angular/platform-browser";
 
 describe('MenuComponent', () => {
   let component: MenuComponent;

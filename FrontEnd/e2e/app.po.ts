@@ -17,6 +17,15 @@ export class AngularPage {
   }
 
   getParagraphText() {
-    return element(by.css('app-root div topnav header div div div span')).getText();
+    return element(by.id('pre-bootstrap')).getText();
+  }
+
+  waitUntilURLContains(waitForUrl, timeout) {
+    return browser.driver.wait(() => {
+      return browser.driver.getCurrentUrl().then((url) => {
+        return url.includes(waitForUrl);
+      });
+    }, timeout);
   }
 }
+
