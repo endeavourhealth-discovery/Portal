@@ -1,8 +1,8 @@
-import { browser, by, element } from 'protractor';
+import {browser, by, element, protractor} from 'protractor';
 
 export class AngularPage {
   navigateTo() {
-    browser.ignoreSynchronization = true;
+    browser.waitForAngularEnabled(false);
     browser.get('/');
 
     browser.getCurrentUrl().then(url => {
@@ -11,21 +11,7 @@ export class AngularPage {
         element(by.name('password')).sendKeys('e2eTestPass');
         element(by.name('login')).click();
       }
-      browser.ignoreSynchronization = false;
-
     });
-  }
-
-  getParagraphText() {
-    return element(by.id('pre-bootstrap')).getText();
-  }
-
-  waitUntilURLContains(waitForUrl, timeout) {
-    return browser.driver.wait(() => {
-      return browser.driver.getCurrentUrl().then((url) => {
-        return url.includes(waitForUrl);
-      });
-    }, timeout);
   }
 }
 

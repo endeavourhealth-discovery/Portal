@@ -19,6 +19,7 @@ exports.config = {
     defaultTimeoutInterval: 30000,
     print: function() {}
   },
+  rootElement: 'app-main',
   onPrepare() {
     require('ts-node').register({
       project: 'e2e/tsconfig.e2e.json'
