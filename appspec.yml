@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /FrontEnd/dist
-    destination: //usr/share/nginx/html
+    destination: //opt/apache-tomcat-8.0.45/webapps/ROOT
   - source: /API/target/API-0.0.1.war
     destination: //opt/apache-tomcat-8.0.45/webapps
 hooks:
