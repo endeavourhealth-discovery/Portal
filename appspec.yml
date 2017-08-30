@@ -3,8 +3,8 @@ os: linux
 files:
   - source: /FrontEnd/dist
     destination: //opt/tomcat/webapps/ROOT
-  - source: /API/target/API-0.0.1.war
-    destination: //opt/tomcat/webapps
+  - source: /API/target/API-0.0.1
+    destination: //opt/tomcat/webapps/ROOT
 hooks:
   ApplicationStop:
     - location: aws_scripts/stop_servers
