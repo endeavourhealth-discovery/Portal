@@ -12,6 +12,7 @@
     </parent>
 
     <artifactId>FrontEnd</artifactId>
+    <packaging>war</packaging>
 
   <build>
     <plugins>
