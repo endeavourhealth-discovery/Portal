@@ -11,7 +11,7 @@ import {Access} from "eds-angular4/dist/security/models/Access";
 })
 export class MenuComponent implements OnInit {
 
-  protected applications : Domain[] = [];
+  public applications : Domain[] = [];
 
   constructor(protected security : SecurityService, protected service : PortalService) {
     let vm = this;
