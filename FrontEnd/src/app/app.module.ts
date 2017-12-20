@@ -10,14 +10,6 @@ import {keycloakHttpFactory} from "eds-angular4/dist/keycloak/keycloak.http";
 import {AbstractMenuProvider, LayoutModule} from "eds-angular4";
 import {MainComponent} from "./portal/main/main.component";
 import {PortalModule} from "./portal/portal.module";
-import {MenuComponent} from "./portal/menu/menu.component";
-
-export class DummyComponent {}
-
-const appRoutes: Routes = [
-  { path: '', component: MenuComponent },
-  { path: 'eds-user-manager', component: DummyComponent }
-];
 
 @NgModule({
   declarations: [],
@@ -26,7 +18,7 @@ const appRoutes: Routes = [
     HttpModule,
     LayoutModule,
     PortalModule,
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(AppMenuService.getRoutes(), {useHash: true}),
     NgbModule.forRoot()
   ],
   providers: [
