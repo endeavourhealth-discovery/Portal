@@ -31,7 +31,7 @@
 
     <servlet-mapping>
         <servlet-name>Portal API</servlet-name>
-        <url-pattern>/api/*</url-pattern>
+        <url-pattern>/portal-api/*</url-pattern>
     </servlet-mapping>
 
     <!-- ===== PUBLIC ENDPOINTS SERVLET ===== -->
@@ -98,7 +98,7 @@
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>api</web-resource-name>
-            <url-pattern>/api/swagger.json</url-pattern>
+            <url-pattern>/portal-api/swagger.json</url-pattern>
         </web-resource-collection>
     </security-constraint>
 
@@ -106,7 +106,7 @@
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>api</web-resource-name>
-            <url-pattern>/api/*</url-pattern>
+            <url-pattern>/portal-api/*</url-pattern>
         </web-resource-collection>
         <auth-constraint>
             <role-name>eds_user</role-name>

@@ -9,7 +9,7 @@ export class PortalService {
   constructor(private http : Http) { }
 
   public getConfig() : Observable<Domain[]> {
-    return this.http.get('/api/config', {withCredentials : true})
+    return this.http.get('/portal-api/config', {withCredentials : true})
       .map((response) => response.json());
   }
 
