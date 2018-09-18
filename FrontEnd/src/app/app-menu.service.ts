@@ -8,6 +8,11 @@ export class DummyComponent {}
 
 @Injectable()
 export class AppMenuService implements  AbstractMenuProvider {
+
+
+  useUserManagerForRoles(): boolean {
+    return false;
+  }
   getClientId(): string {
     return 'eds-portal';
   }
