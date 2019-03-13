@@ -7,7 +7,7 @@ import {AppMenuService} from "./app-menu.service";
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {KeycloakService} from "eds-angular4/dist/keycloak/keycloak.service";
 import {keycloakHttpFactory} from "eds-angular4/dist/keycloak/keycloak.http";
-import {AbstractMenuProvider, LayoutModule} from "eds-angular4";
+import {AbstractMenuProvider, LayoutModule, UserManagerNotificationService} from 'eds-angular4';
 import {MainComponent} from "./portal/main/main.component";
 import {PortalModule} from "./portal/portal.module";
 
@@ -23,7 +23,7 @@ import {PortalModule} from "./portal/portal.module";
   ],
   providers: [
     KeycloakService,
-    { provide: Http, useFactory: keycloakHttpFactory, deps: [XHRBackend, RequestOptions, KeycloakService] },
+    { provide: Http, useFactory: keycloakHttpFactory, deps: [XHRBackend, RequestOptions, KeycloakService, AbstractMenuProvider, UserManagerNotificationService] },
     { provide: AbstractMenuProvider, useClass : AppMenuService }
   ],
   bootstrap: [MainComponent]

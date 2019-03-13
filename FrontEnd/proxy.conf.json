@@ -1,10 +1,10 @@
 {
   "/portal-api": {
-    "target": "http://localhost:8000",
+    "target": "http://localhost:8081",
     "secure": false
   },
   "/public": {
-    "target": "http://localhost:8000",
+    "target": "http://localhost:8081",
     "secure": false
   }
 }

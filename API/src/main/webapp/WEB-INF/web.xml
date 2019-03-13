@@ -108,9 +108,9 @@
             <web-resource-name>api</web-resource-name>
             <url-pattern>/portal-api/*</url-pattern>
         </web-resource-collection>
-        <auth-constraint>
+<!--        <auth-constraint>
             <role-name>portal:api</role-name>
-        </auth-constraint>
+        </auth-constraint>-->
     </security-constraint>
 
     <!-- use Keycloak authentication valve installed in the container -->

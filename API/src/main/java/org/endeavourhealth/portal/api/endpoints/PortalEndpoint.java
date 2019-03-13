@@ -12,7 +12,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 
-@Path("/")
+@Path("/config")
 @Metrics(registry = "PortalMetricRegistry")
 @Api(description = "Initial api for all calls relating to the portal")
 public class PortalEndpoint {
@@ -20,7 +20,6 @@ public class PortalEndpoint {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Timed(absolute = true, name = "PortalEndpoint.Config.Get")
-    @Path("/config")
     @ApiOperation(value = "Returns configuration data")
     public Response get(@Context SecurityContext sc) throws Exception {
         String config = ConfigManager.getConfiguration("applications");
